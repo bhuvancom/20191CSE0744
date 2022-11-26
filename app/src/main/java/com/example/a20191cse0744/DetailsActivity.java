@@ -21,9 +21,9 @@ public class DetailsActivity extends AppCompatActivity {
         btnConfirm_744 = findViewById(R.id.btn_confirm);
         tv_details744 = findViewById(R.id.tv_details);
         StringBuilder sb = new StringBuilder();
-        sb.append("Name : \t").append(getValue("name")).append("\n");
-        sb.append("Number : \t").append(getValue("number")).append("\n");
-        sb.append("Items : \t").append(getValue("item")).append("\n");
+        sb.append("Customer Name : \t").append(getValue("name")).append("\n");
+        sb.append("Customer Number : \t").append(getValue("number")).append("\n");
+        sb.append("Items : \n").append(getValue("item")).append("\n");
         sb.append("Total : \t").append(getValue("total"));
         tv_details744.setText(sb.toString());
         btnConfirm_744.setOnClickListener(new View.OnClickListener() {
@@ -34,6 +34,7 @@ public class DetailsActivity extends AppCompatActivity {
                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
+                                DetailsActivity.super.onBackPressed();
                                 dialogInterface.dismiss();
                             }
                         });

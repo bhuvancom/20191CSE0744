@@ -59,14 +59,12 @@ public class MainActivity extends AppCompatActivity {
         StringBuilder sb = new StringBuilder();
         int total = getTotal744();
         if (total <= 0) {
-            Toast.makeText(this, "Select atleast one item", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Select at-least one item", Toast.LENGTH_SHORT).show();
             return;
         }
 
         String name = name_744.getEditText().getText().toString();
         String number = number_744.getEditText().getText().toString();
-
-        sb.append("Selected Items : \t");
         sb.append(getValue744(cb_1_744, qty1_744, 50));
         sb.append(getValue744(cb_2_744, qty2_744, 250));
         sb.append(getValue744(cb_3_744, qty3_744, 200));
@@ -77,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("name", name);
         intent.putExtra("number", number);
         intent.putExtra("item", sb.toString());
-        intent.putExtra("total", total);
+        intent.putExtra("total", String.valueOf(total));
         startActivity(intent);
     }
 
