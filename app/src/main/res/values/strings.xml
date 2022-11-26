@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">20191CSE0744</string>
+    <string name="qty">Qty</string>
+    <string name="pencil">Pencil</string>
+    <string name="book">Book</string>
+    <string name="name">Customer Name</string>
+    <string name="mobile">Customer Mobile</string>
+</resources>
